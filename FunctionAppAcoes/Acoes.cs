@@ -31,7 +31,7 @@ namespace FunctionAppAcoes
             log.LogInformation($"Acoes HTTP trigger - codigo da Acao: {codigo}");
             Acao acao = null;
             if (!String.IsNullOrWhiteSpace(codigo))
-                acao = AcoesRepository.Get(codigo);
+                acao = AcoesRepository.Get(codigo.ToUpper());
 
             if (acao != null)
             {
